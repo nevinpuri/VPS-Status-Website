@@ -1,0 +1,5 @@
+- cpu usage
+- memory usage
+- free disk space
+- hourly vps usage (upload to a database)
+- commands which you will be able to run at the press of a button (like check status of screens)
