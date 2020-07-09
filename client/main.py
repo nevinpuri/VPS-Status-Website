@@ -70,7 +70,7 @@ nevinVPS.getAllData()
 
 filteredVPSData = {"vpsName": nevinVPS.vpsName, "cpuUsage": nevinVPS.cpuUsage, "memoryUsage": nevinVPS.memoryUsage,
                    "storageUsage": nevinVPS.storageUsage, "year": nevinVPS.year, "month": nevinVPS.month, "date": nevinVPS.date}
-print(filteredVPSData)
+# print(filteredVPSData)
 sentVPSData = requests.post(
     "http://localhost:4823/statusAPI", data=filteredVPSData
 )
