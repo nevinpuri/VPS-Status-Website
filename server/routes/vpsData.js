@@ -7,9 +7,9 @@ router.get("/", async (req, res) => {
   try {
     let now = new Date();
     const vpsData = await VPSServerData.find({
-      year: now.getFullYear(),
-      month: now.getMonth(),
-      date: now.getDate(),
+      year: parseInt(now.getFullYear()),
+      month: parseInt(now.getMonth() + 1),
+      date: parseInt(now.getDate()),
     });
     res.json(vpsData);
   } catch (err) {
