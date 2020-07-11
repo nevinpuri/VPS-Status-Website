@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { v4 as uuidv4 } from "uuid";
 import VPSData from "./VPSData.js";
-import axios from "axios";
+import "./style.css";
 
 class App extends Component {
   constructor(props) {
@@ -20,8 +20,8 @@ class App extends Component {
     return (
       !this.state.loading && (
         <div>
-          <h1>oifjaois[djf</h1>
-          <VPSData vpsStatus={this.state.vpsData} />
+          <h1 className="text-center jumbotron">Nevin.CC VPS Status</h1>
+          <VPSData vpsStatus={this.state.vpsData} className="text-center" />
         </div>
       )
     );
