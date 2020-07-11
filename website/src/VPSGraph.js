@@ -23,8 +23,8 @@ const VPSGraph = ({ componentName, componentData, graphColor }) => {
             <stop offset="95%" stopColor={graphColor} stopOpacity={0} />
           </linearGradient>
         </defs>
-        <XAxis dataKey="hour" />
-        <YAxis dataKey="Usage" />
+        <XAxis type="number" domain={[0, 24]} dataKey="hour" />
+        <YAxis type="number" domain={[0, 100]} dataKey="Usage" />
         <CartesianGrid strokeDasharray="5 5" />
         <Tooltip />
         <Area
