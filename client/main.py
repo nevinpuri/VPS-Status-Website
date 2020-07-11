@@ -18,9 +18,10 @@ class VPSData(object):
         self.year = 0
         self.month = 0
         self.date = 0
+        self.hour = 0
 
     def __repr__(self):
-        return str({"vpsName": self.vpsName, "cpuUsage": self.cpuUsage, "memoryUsage": self.memoryUsage, "storageUsage": self.storageUsage, "year": self.year, "month": self.month, "date": self.date})
+        return str({"vpsName": self.vpsName, "cpuUsage": self.cpuUsage, "memoryUsage": self.memoryUsage, "storageUsage": self.storageUsage, "year": self.year, "month": self.month, "date": self.date, "hour": self.hour})
 
     def getAllData(self):
       #  self.getAllProcesses()
@@ -63,13 +64,17 @@ class VPSData(object):
         now = date.today()
         return now.day
 
+    def getCurrentHour(self):
+        now = datetime.now()
+        return now.hour
+
 
 nevinVPS = VPSData()
 nevinVPS.getAllData()
 
 
 filteredVPSData = {"vpsName": nevinVPS.vpsName, "cpuUsage": nevinVPS.cpuUsage, "memoryUsage": nevinVPS.memoryUsage,
-                   "storageUsage": nevinVPS.storageUsage, "year": nevinVPS.year, "month": nevinVPS.month, "date": nevinVPS.date}
+                   "storageUsage": nevinVPS.storageUsage, "year": nevinVPS.year, "month": nevinVPS.month, "date": nevinVPS.date, "hour": nevinVPS.hour}
 # print(filteredVPSData)
 sentVPSData = requests.post(
     "http://localhost:4823/statusAPI", data=filteredVPSData

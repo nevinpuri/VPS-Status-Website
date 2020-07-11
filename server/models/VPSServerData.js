@@ -29,6 +29,10 @@ const VPSServerDataSchema = mongoose.Schema({
     type: Number,
     required: true,
   },
+  hour: {
+    type: Number,
+    required: true,
+  },
 });
 
 module.exports = mongoose.model("VPSServerData", VPSServerDataSchema);

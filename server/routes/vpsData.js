@@ -27,6 +27,7 @@ router.post("/", async (req, res) => {
       year: req.body.year,
       month: req.body.month,
       date: req.body.date,
+      hour: req.body.hour,
     });
 
     let savedVPSData = await vpsData.save();
