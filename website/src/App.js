@@ -13,16 +13,7 @@ class App extends Component {
   }
 
   componentDidMount = async () => {
-    await this.getVPSData();
     this.setState({ loading: false });
-  };
-
-  getVPSData = async () => {
-    const { data } = await axios.get("https://nevin.cc/statusAPI");
-    data.map((hour) => {
-      this.setState({ vpsData: [...this.state.vpsData, hour] });
-    });
-    console.log(this.state.vpsData);
   };
 
   render() {

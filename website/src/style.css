@@ -1,0 +1,9 @@
+.vps-data-graph {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.graph-text {
+  margin-left: 20rem;
+}
